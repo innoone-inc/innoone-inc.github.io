@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INNOONE — AI-Native Precision Oncology & Drug Discovery</title>
+<meta name="description" content="INNOONE turns whole-genome data into diagnosis, optimal drug recommendation and new drug targets — one end-to-end AI platform. Seongnam, South Korea.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F3A5F;--ink:#16233A;--orange:#E76F51;--teal:#2A9D8F;--grey:#8D99AE;--line:#E3E8EF;--bg:#FFFFFF;--soft:#F5F7FA}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav img{height:34px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:500;color:var(--navy)}
+.nav ul a:hover{color:var(--orange)}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;font-weight:600;font-size:14px;background:var(--navy);color:#fff}
+.btn:hover{background:var(--orange)}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.ghost:hover{border-color:var(--orange);color:var(--orange);background:transparent}
+/* hero */
+.hero{padding:96px 0 72px;background:linear-gradient(180deg,#F7F9FC 0%,#fff 100%)}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--orange);margin-bottom:18px}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;color:var(--navy);font-weight:800;max-width:14ch}
+.lead{font-size:clamp(17px,2vw,21px);color:#3B4A63;max-width:60ch;margin:0 0 32px}
+.lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--orange);display:inline-block}
+/* chain */
+.chain{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.chain div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;position:relative}
+.chain div:not(:last-child)::after{content:"→";position:absolute;right:-16px;top:50%;transform:translateY(-50%);color:var(--grey);font-size:20px;background:#fff;padding:0 4px}
+.chain small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:6px}
+.chain strong{display:block;font-size:17px;color:var(--navy);margin-bottom:6px}
+.chain p{margin:0;font-size:14px;color:#4B5A73}
+/* sections */
+section{padding:80px 0;border-top:1px solid var(--line)}
+section.soft{background:var(--soft)}
+h2{font-size:clamp(26px,3.2vw,36px);letter-spacing:-.02em;color:var(--navy);margin:0 0 12px;font-weight:800}
+.sub{font-size:17px;color:#4B5A73;max-width:64ch;margin:0 0 40px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+.card h3{margin:0 0 6px;font-size:20px;color:var(--navy)}
+.card .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.card p{margin:0 0 14px;color:#4B5A73;font-size:15px}
+.card ul{margin:0;padding-left:18px;color:#3B4A63;font-size:14.5px}
+.card li{margin:5px 0}
+.card li b{color:var(--ink);font-weight:600}
+.orange{color:var(--orange)}.teal{color:var(--teal)}
+.bar{height:4px;border-radius:4px;margin-bottom:18px}
+/* stats */
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.stat .n{font-size:34px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.stat .l{font-size:13.5px;color:#4B5A73;margin-top:8px}
+/* europe */
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.quote{border-left:4px solid var(--orange);padding:6px 0 6px 20px;font-size:22px;font-weight:600;color:var(--navy);line-height:1.35;margin:0 0 24px}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:16px;font-size:15px}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list b{color:var(--navy)}
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.tl div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.tl small{display:block;color:var(--orange);font-weight:700;font-size:12px;letter-spacing:.08em;margin-bottom:6px}
+.tl p{margin:0;font-size:14px;color:#3B4A63}
+/* contact */
+.contact{background:var(--navy);color:#fff;border-radius:20px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.contact h2{color:#fff}
+.contact p{color:#C9D3E3;margin:0 0 8px;font-size:15.5px}
+.contact a.mail{font-size:22px;font-weight:700;color:#fff;border-bottom:2px solid var(--orange)}
+.contact .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px}
+.contact .box p{margin:0 0 10px}
+footer{padding:28px 0 40px;font-size:13px;color:var(--grey);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){
+ .nav ul{display:none}
+ .chain,.grid2,.grid3,.grid4,.two,.contact{grid-template-columns:1fr}
+ .chain div:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-18px;transform:translateX(-50%)}
+ .tl{grid-template-columns:1fr 1fr}
+ .list li{grid-template-columns:1fr}
+ section{padding:56px 0}.hero{padding:64px 0 48px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" aria-label="INNOONE home"><img src="assets/logo.png" alt="INNOONE"></a>
+    <ul>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="slush2026.html" style="color:var(--orange)">Slush 2026 ↗</a></li>
+      <li><a href="#traction">Traction</a></li>
+      <li><a href="#company">Company</a></li>
+      <li><a href="#contact" class="btn">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">AI-native precision oncology &amp; drug discovery</span>
+    <h1>From the whole genome to the right drug.</h1>
+    <p class="lead">INNOONE turns whole-genome sequencing data into <b>accurate diagnosis</b>, <b>optimal drug recommendation</b> and <b>new drug targets</b> — one end-to-end AI platform, built by cancer-genomics researchers in South Korea.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Talk to us</a>
+      <a class="btn ghost" href="#platform">See the platform</a>
+      <a class="pill" href="slush2026.html"><i></i> Meet us at Slush 2026 · Helsinki · 18–19 Nov ↗</a>
+    </div>
+
+    <div class="chain">
+      <div><small>Input</small><strong>Whole-genome &amp; multi-omics data</strong><p>WGS · RNA · proteomics · clinical records, pseudonymised at source.</p></div>
+      <div><small>Interpret</small><strong>Diagnosis &amp; risk in days, not weeks</strong><p>Germline and somatic variants, structural changes, cancer &amp; disease risk scores.</p></div>
+      <div><small>Act</small><strong>Optimal drug &amp; new targets</strong><p>Matched existing therapies, dose guidance and structure-based drug-target discovery.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORM -->
+<section id="platform">
+  <div class="wrap">
+    <h2>Two divisions, one End-to-End AI</h2>
+    <p class="sub">Most tools stop at a report. INNOONE connects interpretation to therapy and to discovery, so the same genome that diagnoses a patient also points to the drug — and to the next drug.</p>
+    <div class="grid2">
+      <div class="card">
+        <div class="bar" style="background:var(--navy)"></div>
+        <div class="k" style="color:var(--navy)">Innoplatform · Diagnosis &amp; prediction</div>
+        <h3>Whole-genome interpretation for clinics and biobanks</h3>
+        <p>Analysis, interpretation and reporting of WGS and multi-omics data — for cancer patients today and for the healthy population's lifetime risk.</p>
+        <ul>
+          <li><b>INNOVANOME</b> — multi-omics variant analysis: coding &amp; non-coding, structural and copy-number changes, clonal evolution.</li>
+          <li><b>INNOPORTAL</b> — clinical data browser and reporting for care teams.</li>
+          <li><b>INOME</b> — personal genome platform: pharmacogenomic drug-safety card, hereditary risk, lifetime re-analysis.</li>
+          <li><b>INODE</b> — pseudonymisation and federated analysis: the genome never leaves the institution.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="bar" style="background:var(--orange)"></div>
+        <div class="k orange">Innodrug · Therapy &amp; drug discovery</div>
+        <h3>From a patient's mutations to the right molecule</h3>
+        <p>AI-predicted protein structures and structure-similarity search turn genomic findings into treatment options and validated targets.</p>
+        <ul>
+          <li><b>INNOVA</b> — drug repurposing and optimal-therapy recommendation by protein-structure similarity, including dose and combination support.</li>
+          <li><b>INNODAC</b> — antigen / antibody candidate discovery and cleavage-aware target refinement for antibody-drug conjugates (ADC).</li>
+          <li>Validated on 13 metalloprotease substrates · published in <b>Scientific Reports (Nature Portfolio), 2026</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOW / PGx -->
+<section class="soft">
+  <div class="wrap">
+    <h2>One blood draw, a lifetime of safer prescriptions</h2>
+    <p class="sub">Health systems already pay for single-gene answers — DPYD testing before 5-FU chemotherapy is standard in Europe. We deliver the same certainty from the whole genome, for every actionable gene at once.</p>
+    <div class="grid4">
+      <div class="card"><div class="k orange">Tier 1</div><h3>Drug-safety card</h3><p>Full pharmacogenomic panel (DPYD, UGT1A1, NUDT15, HLA-B*58:01, CYP2C19, VKORC1 …) — definitive, immediate.</p></div>
+      <div class="card"><div class="k" style="color:var(--navy)">Tier 2</div><h3>Silent hereditary risks</h3><p>Familial hypercholesterolaemia, hereditary cancers (BRCA and beyond) — definitive, life-saving.</p></div>
+      <div class="card"><div class="k teal">Tier 3</div><h3>Family card</h3><p>Carrier status passed to the next generation — definitive, inherited.</p></div>
+      <div class="card"><div class="k" style="color:var(--grey)">Tier 4</div><h3>Risk scores &amp; re-analysis</h3><p>Cancer, dementia and metabolic onset risk scores, re-analysed every year as evidence grows.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EUROPE BANNER -->
+<section id="europe">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <h2>Global by design</h2>
+        <p class="sub" style="margin-bottom:16px">Data stays where it is. Only the analysis travels. Our pseudonymisation and federated-analysis module (INODE) lets hospitals and biobanks in Europe, the Americas and Asia use INNOONE without exporting a single genome.</p>
+        <p style="margin:0"><a class="btn" href="slush2026.html">Our European entry &amp; Slush 2026 →</a></p>
+      </div>
+      <div class="card">
+        <div class="k orange">Slush 2026 · Helsinki · 18–19 Nov</div>
+        <h3>Selected for the Gyeonggi Province AI Cluster Global Programme (Europe)</h3>
+        <p style="margin:0">One of up to ten Korean AI companies selected to meet Nordic and European investors, hospitals and pharma. <a href="slush2026.html" style="color:var(--orange);font-weight:600">Read more ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACTION -->
+<section id="traction" class="soft">
+  <div class="wrap">
+    <h2>Eight months since founding, proven by execution</h2>
+    <p class="sub">Not an early-stage idea but an AI-native company inheriting twenty years of national genome research.</p>
+    <div class="grid4" style="margin-bottom:28px">
+      <div class="stat"><div class="n">2,100+</div><div class="l">Citations of the founding team's research — Nature, Nature Genetics, Cell and more</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Core AI drug-discovery patents filed, under accelerated examination</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Clinical proof-of-concept sites, including Korea's National Cancer Center and Big-5 hospitals</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Peer-reviewed paper in Scientific Reports (Nature Portfolio), July 2026</div></div>
+    </div>
+    <div class="tl">
+      <div><small>Q1 2026</small><p>Incorporated in Seongnam · in-house GPU cluster (H100 · A100 · RTX 6000)</p></div>
+      <div><small>H1 2026</small><p>Two core patents filed · clinical PoC at four sites</p></div>
+      <div><small>Jul 2026</small><p>INNODAC paper published in Scientific Reports</p></div>
+      <div><small>Aug 2026</small><p>Gyeonggi Province AI Membership company</p></div>
+      <div><small>Nov 2026</small><p>Slush 2026, Helsinki — European PoC and investor talks</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section id="company">
+  <div class="wrap">
+    <h2>Company</h2>
+    <p class="sub">INNOONE Inc. was founded in 2026 in Seongnam, South Korea, by cancer-genomics researchers and biotech operators whose work spans national genome programmes, Big-5 hospital validation and a KOSDAQ technology listing.</p>
+    <div class="grid3">
+      <div class="card"><div class="k" style="color:var(--navy)">Science</div><h3>National genome programmes</h3><p>Founders have led genome analysis for Korea's national precision-medicine and bio-big-data initiatives and contribute to the ICGC-ARGO consortium.</p></div>
+      <div class="card"><div class="k teal">Clinic</div><h3>Validated where it matters</h3><p>AI clinical-decision-support and data portals built with the National Cancer Center and leading university hospitals.</p></div>
+      <div class="card"><div class="k orange">Capital</div><h3>Operators, not only scientists</h3><p>Leadership with venture-finance and public-listing experience, and a self-sustaining domestic health-check business funding global expansion.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Let's talk</h2>
+        <p>Clinical or biobank partners, pharma collaborators and investors — we reply within two business days.</p>
+        <p style="margin-top:18px"><a class="mail" href="mailto:dwhong@innoone.org">dwhong@innoone.org</a></p>
+      </div>
+      <div class="box">
+        <p><b>Duncan Hong</b> · Co-CEO</p>
+        <p>INNOONE Inc.<br>Seongnam-si, Gyeonggi-do 13590<br>Republic of Korea</p>
+        <p style="margin:0"><a href="https://www.linkedin.com/in/dongwan-hong-1a7b9b92/" target="_blank" rel="noopener" style="color:#fff;border-bottom:1px solid rgba(255,255,255,.5)">LinkedIn ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 INNOONE Inc. — INNOvation for everyONE</span>
+  <span>Seongnam-si, Gyeonggi-do 13590, Republic of Korea · dwhong@innoone.org</span>
+</footer>
+
+</body>
+</html>
